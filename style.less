@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,900);
+
+@dark: #222;
+@light: #eee;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: @dark;
+  background-image: url('http://colons.co/noise.png');
+  color: @light;
+  text-transform: uppercase;
+
+  @media (max-width: 80em) {font-size: .8em}
+  @media (max-width: 64em) {font-size: .6em}
+  @media (max-width: 48em) {font-size: .4em}
+  @media (max-width: 32em) {header{font-size: .8em}}
+
+  header, footer {
+    display: block;
+  }
+
+  header {
+    position: relative;
+
+    h1 {
+      line-height: .8em;
+      font-size: 10em;
+      font-weight: 900;
+
+      span {
+        display: block;
+
+        &::before {
+          content: 'or';
+          text-transform: lowercase;
+          font-size: .5em;
+          opacity: .2;
+          font-weight: 100;
+          margin: 0 .1em;
+          line-height: .8em;
+        }
+
+        &:first-child::before {
+          opacity: 0;
+        }
+      }
+    }
+
+    > p {
+      font-size: 4em;
+      line-height: .8em;
+
+      color: @dark;
+      background-color: @light;
+      background-image: url('http://colons.co/noise.png');
+
+      margin-top: .1em;
+      padding: .1em;
+      text-align: right;
+
+      font-weight: 900;
+    }
+  }
+
+  > a {
+    display: block;
+    height: 30em;
+    min-height: 15em;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    p {
+      font-size: 4em;
+      line-height: .8em;
+      font-weight: 900;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      
+      span {
+        padding: .1em;
+        display: inline-block;
+        float: left;
+        clear: left;
+        color: @dark;
+        background-color: @light;
+      }
+    }
+
+    &:hover {
+      z-index: 1;
+
+      span {
+        color: @light;
+        background-color: @dark;
+      }
+    }
+  }
+
+  footer {
+    height: 10em;
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 900;
+
+    p {
+      position: absolute;
+      bottom: .3em;
+      right: .5em;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      a {
+        text-decoration: none;
+        color: @light;
+
+        &:hover {
+          background-color: @light;
+          color: @dark;
+        }
+      }
+    }
+  }
+}
