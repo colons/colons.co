@@ -19,7 +19,16 @@ body {
   @media (max-width: 80em) {font-size: .8em}
   @media (max-width: 64em) {font-size: .6em}
   @media (max-width: 48em) {font-size: .4em}
-  @media (max-width: 32em) {header{font-size: .8em}}
+  @media (max-width: 32em) {
+    header {
+      font-size: .8em;
+
+      h1 span::before {
+        font-weight: 400 !important;
+      }
+    }
+  }
+  @media (max-width: 26em) {header{font-size: .6em}}
 
   header, footer {
     display: block;
@@ -40,7 +49,7 @@ body {
           content: 'or';
           text-transform: lowercase;
           font-size: .5em;
-          opacity: .2;
+          opacity: .4;
           font-weight: 100;
           margin: 0 .1em;
           line-height: .8em;
@@ -71,7 +80,6 @@ body {
   > a {
     display: block;
     height: 30em;
-    min-height: 15em;
     background-size: cover;
     background-position: center center;
     position: relative;
