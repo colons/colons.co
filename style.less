@@ -15,6 +15,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+
   background-color: @dark;
   background-image: url('http://colons.co/noise.png');
   color: @light;
@@ -58,12 +59,12 @@ body {
           content: 'or';
           text-transform: lowercase;
           font-size: .5em;
+          line-height: .8em;
           opacity: .4;
           font-weight: @w-light;
-          position: absolute;
-          left: .15em;
-          bottom: 0;
-          line-height: .8em;
+          display: inline-block;
+          width: 1.1em;
+          margin-left: -1.1em;
         }
 
         &:first-child {
