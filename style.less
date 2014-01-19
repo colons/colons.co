@@ -43,6 +43,7 @@ body {
         display: block;
         padding-left: .6em;
         position: relative;
+        margin-top: .15em;
 
         &::before {
           content: 'or';
@@ -50,12 +51,18 @@ body {
           font-size: .5em;
           opacity: .4;
           font-weight: 100;
-          margin: 0 .1em 0 -1em;
+          position: absolute;
+          left: .15em;
+          bottom: 0;
           line-height: .8em;
         }
 
-        &:first-child::before {
-          content: none;
+        &:first-child {
+          margin-top: 0;
+
+          &::before {
+            content: none;
+          }
         }
       }
     }
