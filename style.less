@@ -1,7 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,400,900);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300);
 
 @dark: #222;
 @light: #eee;
+
+@w-heavy: 800;
+@w-normal: 400;
+@w-light: 300;
 
 * {
   margin: 0;
@@ -10,7 +14,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: @dark;
   background-image: url('http://colons.co/noise.png');
   color: @light;
@@ -23,7 +27,7 @@ body {
   @media (max-width: 22em) {
     font-size: .3em;
     header span::before {
-      font-weight: 400 !important;
+      font-weight: @w-normal !important;
     }
   }
 
@@ -37,7 +41,7 @@ body {
     h1 {
       line-height: .8em;
       font-size: 10em;
-      font-weight: 900;
+      font-weight: @w-heavy;
       padding: .15em 0;
 
       span {
@@ -51,7 +55,7 @@ body {
           text-transform: lowercase;
           font-size: .5em;
           opacity: .4;
-          font-weight: 100;
+          font-weight: @w-light;
           position: absolute;
           left: .15em;
           bottom: 0;
@@ -77,10 +81,10 @@ body {
       background-image: url('http://colons.co/noise.png');
 
       margin-top: .1em;
-      padding: .1em;
+      padding: .1em .1em .2em;
       text-align: right;
 
-      font-weight: 900;
+      font-weight: @w-heavy;
     }
   }
 
@@ -94,13 +98,13 @@ body {
     p {
       font-size: 4em;
       line-height: .8em;
-      font-weight: 900;
+      font-weight: @w-heavy;
       position: absolute;
       bottom: 0;
       left: 0;
       
       span {
-        padding: .1em;
+        padding: .05em .1em .1em;
         display: block;
         float: left;
         clear: left;
@@ -123,7 +127,7 @@ body {
     height: 10em;
     position: relative;
     font-size: 1.5em;
-    font-weight: 400;
+    font-weight: @w-normal;
 
     background-image: url('http://colons.co/stamp.png');
     background-repeat: no-repeat;
