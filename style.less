@@ -44,7 +44,11 @@ body {
       font-weight: @w-heavy;
       padding: .15em 0;
 
-      span {
+      .or {
+        display: none;
+      }
+
+      > span {
         display: block;
         padding-left: .6em;
         position: relative;
@@ -68,6 +72,10 @@ body {
           &::before {
             content: none;
           }
+        }
+
+        > span {
+          display: block;
         }
       }
     }
