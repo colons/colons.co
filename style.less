@@ -7,6 +7,10 @@
 @w-normal: 400;
 @w-light: 300;
 
+.noise() {
+  background-image: url('http://colons.co/noise.png');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +19,9 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-
+  .noise();
   background-color: @dark;
-  background-image: url('http://colons.co/noise.png');
+  
   color: @light;
   text-transform: uppercase;
 
@@ -87,7 +91,7 @@ body {
 
       color: @dark;
       background-color: @light;
-      background-image: url('http://colons.co/noise.png');
+      .noise();
 
       margin-top: .1em;
       padding: .05em .1em .1em;
@@ -119,6 +123,7 @@ body {
         clear: left;
         color: @dark;
         background-color: @light;
+        .noise();
       }
     }
 
