@@ -109,29 +109,41 @@ body {
     position: relative;
     text-decoration: none;
 
-    p {
-      font-size: 4em;
-      line-height: .8em;
-      font-weight: @w-heavy;
+    div {
       position: absolute;
       bottom: 0;
       left: 0;
-      
-      span {
-        padding: .05em .1em .1em;
-        display: block;
-        float: left;
+
+      p.name {
+        font-weight: @w-heavy;
+        font-size: 4em;
+        line-height: .8em;
+
+        span {
+          padding: .05em .1em .1em;
+          display: block;
+          float: left;
+          clear: left;
+          color: @dark;
+          background-color: @light;
+          .noise();
+        }
+      }
+
+      p.description {
         clear: left;
-        color: @dark;
-        background-color: @light;
-        .noise();
+        display: inline-block;
+        font-size: 1.5em;
+        text-transform: none;
+        padding: 0 .4em .2em;
+        opacity: .8;
+        color: @light;
+        background-color: @dark;
       }
     }
 
     &:hover {
-      z-index: 1;
-
-      span {
+      p.name span {
         color: @light;
         background-color: @dark;
       }
