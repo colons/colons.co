@@ -55,21 +55,5 @@
     <footer>
       <p><a href="https://www.youtube.com/watch?v=VmD9U99upow">let's watch a keion</a></p>
     </footer>
-    
-    <script>
-      var body = document.body,
-          timer;
-
-      window.addEventListener('scroll', function() {
-        clearTimeout(timer);
-        if(!body.classList.contains('scrolling')) {
-          body.classList.add('scrolling');
-        }
-
-        timer = setTimeout(function(){
-          body.classList.remove('scrolling');
-        }, 100);
-      }, false);
-    </script>
   </body>
 </html>
