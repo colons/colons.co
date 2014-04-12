@@ -141,6 +141,17 @@ body {
         color: @light;
         background-color: @dark;
       }
+
+      @media (max-width: 40em) {
+        font-size: 1.3em;
+
+        p.name span {padding: .1em .1em .2em}
+
+        p.description {
+          font-size: 2.1em;
+          padding: 0 .2em .1em;
+        }
+      }
     }
 
     &:hover {
