@@ -171,27 +171,45 @@ body {
   footer {
     height: 10em;
     position: relative;
-    font-size: 1.5em;
-    font-weight: @w-normal;
+    font-size: 1.5rem;
+    @media (max-width: 55em) {font-size: 1rem}
 
     background-image: url('https://colons.co/stamp.png');
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 5em 5em;
+    background-position: center 2.2em;
+    background-size: 4em 4em;
 
-    p {
+    a {
+      text-decoration: none;
+      color: @light;
+    }
+
+    #contact {
+      text-align: center;
       position: absolute;
+      bottom: 2.2em;
+      width: 100%;
+      text-transform: none;
+
+      a {
+        opacity: 0.3;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    #keion {
+      position: absolute;
+      text-align: right;
       bottom: .3em;
       right: .5em;
       opacity: 0.001;
+      font-size: 0.8em;
 
       &:hover {
         opacity: .5;
-      }
-
-      a {
-        text-decoration: none;
-        color: @light;
       }
     }
   }
