@@ -49,26 +49,22 @@ body {
       font-weight: @w-heavy;
       padding: .15em 0;
 
-      .or {
-        display: none;
-      }
-
-      > span {
+      .name {
         display: block;
         padding-left: .6em;
         position: relative;
         margin-top: .15em;
 
-        &::before {
-          content: 'or';
-          text-transform: lowercase;
-          font-size: .5em;
-          line-height: .8em;
-          opacity: .4;
-          font-weight: @w-light;
-          display: inline-block;
-          width: 1.1em;
-          margin-left: -1.1em;
+        .or {
+            width: 0;
+            text-transform: lowercase;
+            font-size: .5em;
+            line-height: .8em;
+            opacity: .4;
+            font-weight: @w-light;
+            display: inline-block;
+            width: 1.1em;
+            margin-left: -1.1em;
         }
 
         &:first-child {
@@ -77,10 +73,6 @@ body {
           &::before {
             content: none;
           }
-        }
-
-        > span {
-          display: block;
         }
       }
     }
